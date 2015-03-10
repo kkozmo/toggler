@@ -1,0 +1,74 @@
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,700);
+
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+
+$body-bg: 																	#ecf0f1;
+$font-family-sans-serif: 								'Amatic+SC', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+$navbar-height: 												45px;
+$navbar-default-bg:											 white; 
+$navbar-default-brand-color: 						#c0392b;
+$brand-primary:													 #c0392b;
+$jumbotron-bg: 													white;
+
+@import 'bootstrap'; 
+
+.navbar {
+    margin-bottom: 0;
+}
+
+body {
+	background: #fff;
+}
+
+/*Homepage Related Stuff */
+
+.jumbotron h1, .jumbotron .h1 {
+color: white;
+}
+
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.center {
+		text-align: center;
+}
+
+.navbar-brand {
+		font-weight: bold;
+}
+
+.pager li > a, 
+.pager li > span {
+border-radius: 6px;
+}
+
+.btn-group {
+border: 2px solid #000;
+border-radius: 8px;
+}
+
+.my-container [class^="col-"] {
+
+  .my-inner {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+  }
+}
