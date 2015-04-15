@@ -1,0 +1,32 @@
+<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+<div class="container-fluid">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <%= link_to "Toggle.TV", root_path, class: "navbar-brand" %>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+
+  <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Home", root_path %> </li>
+      <li class="dropdown">
+      <%= link_to 'Tournaments <b class="caret"></b>' .html_safe, tournaments_path, :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle' %>
+      <ul class="dropdown-menu" role="menu" aria-labelledby="drop1"> 
+    <li class="dropdown-link"><a href="/tournaments">TI2</a></a></li>
+    <li class="dropdown-link"><a href="/tournaments">StarLadder</a></a></li>
+    <li class="dropdown-link"><a href="/tournaments">WePlay</a></a></li>
+    </li> 
+  </ul>
+    <li><%= link_to "Event", event_path %> </li>
+
+    
+  </ul> <!-- Navbar right --> 
+</div><!-- /.container-fluid -->
+</nav>   
+

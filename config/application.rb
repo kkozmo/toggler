@@ -8,6 +8,13 @@ Bundler.require(*Rails.groups)
 
 module Toggle
   class Application < Rails::Application
+
+
+    # Generators for rspec, also one for factorygirl 
+    config.generators do |g| 
+      g.test_framework :rspec 
+      g.fixture_replacement :factory_girl
+    end 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

@@ -1,1 +1,0 @@
-user = FactoryGirl.create :user 

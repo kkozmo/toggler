@@ -1,0 +1,194 @@
+<div class="jumbotron center">
+    <div class="container my-container">
+        <div class="col-xs-12 col-lg-6">
+            <a><%= image_tag("TI2.jpg", :alt => "Toggle") %></a>
+        </div>
+        <div class="col-xs-12 col-lg-5">
+            <h2>WHAT TEAM WILL WIN?</h2>
+            <p> Enter for your chance to win 1 of 12 Razer Headsets.</p> 
+        </div>
+    </div>
+<hr><br></br>
+
+<div class="container my-container"> 
+        <div class="col-md-2"></div>
+        <div class="col-md-3">
+            <p><a><%= image_tag("alliance.jpg", :alt => "Team 1") %></a><b>Alliance</b></p>
+            <p class="text.center">10-12-1</p>
+        </div>  
+        <div class="col-md-2">
+        <br>
+            <h2 class="text-center"> VS </h2>
+        </div> 
+        <div class="col-md-3">
+            <p><a><%= image_tag("navi.jpg", :alt => "Team 2") %></a><b>Na'Vi</b></p>
+            <p class="text-center">9-3-0</p>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<hr>
+
+
+  <% if user_signed_in? %>
+
+<div class="container my-container"> 
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+      <p class="text.center">2.1</p>
+    </div>  
+    <div class="col-md-2">
+      <p class="text-center"> Odds</p>
+    </div> 
+    <div class="col-md-3">
+      <p class="text-center">2.6</p>
+  </div>
+  <div class="col-md-3"></div>
+</div>
+<hr>
+
+<div class="col-md-12">
+  <p class ="text-center"> Place your Bets</p>
+
+  <hr>
+  <% else %>
+<% end%>
+
+<div class="container my-container">
+    <div class="col-md-2"></div>
+    <div class="col-md-3">
+        <br></br><label class="btn btn-primary btn-block" data-toggle="modal" data-target="#formteam1">
+            <h3>Alliance</h3></label>
+    </div>
+<div class="col-md-2">
+    <h2>Game 1</h2><p>October 31st, 2014, 3:00PM.</p>
+</div>
+<div class="col-md-3">
+    <br></br>
+     <label class ="btn btn-primary btn-block" data-toggle="modal" data-target="#formteam2">
+    <h3>Na'vi</h3></label>
+ </div>
+</div>
+  <hr>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class ="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          Watch the stream. 
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+      <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
+</div>
+       
+      </div>
+    </div>
+  </div>
+
+<!--Modal for team 1 !--> 
+
+<div class="modal fade" id="formteam1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Who will win the TI2 Final?</h4>
+      </div>
+      <div class="modal-body">
+                <p>
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter your email for your chance to win.</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+
+    <div class="radio">
+  <label>
+    <input type="radio" name="team1" id="optionsRadios1" value="option1" checked>
+   Alliance Will Win.
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="team1" id="optionsRadios2" value="option2">
+   Na'Vi Will Win.
+  </label>
+</div>
+  </div>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= link_to "Submit", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Team 2 !--> 
+<div class="modal fade" id="formteam2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Who will win the TI2 Final?</h4>
+      </div>
+      <div class="modal-body">
+                <p>
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Enter your email for your chance to win.</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+
+    <div class="radio">
+  <label>
+    <input type="radio" name="team2" id="optionsRadios1" value="option1">
+   Alliance Will Win.
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="team2" id="optionsRadios2" value="option2" checked>
+   Nav'Vi Will Win.
+  </label>
+</div>
+  </div>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <%= link_to "Submit", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <nav>
+        <ul class="pager">
+        <li class="previous"><a href="#">&larr; Previous Match</a></li>
+        <li class="next"><a href="#">Next Match &rarr;</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<!-- This is all Extra at the moment. 
+
+<div class="jumbotron center">
+    <% if user_signed_in? %>
+        <h1>Starting posting your favourite pictures!</h1>
+    <% else %>
+
+    <h1>Which team will win?</h1>
+        <p>
+            <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %> <%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %> for our sweet product offering.
+        </p>
+    <% end %>
+</div> 
+!--> 
+
+
+

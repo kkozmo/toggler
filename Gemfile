@@ -10,16 +10,18 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'bcrypt', '>= 3.1.3'
+gem 'gravatar_image_tag', '1.2.0'
 
 group :development, :test do
   gem 'spring',      '1.1.3'
   gem 'sqlite3'
+  gem 'byebug',      '3.5.1'
 end
 
 group :test do
   gem 'rspec', '~> 3.2.0'
   gem 'rspec-rails', '~> 3.0'
-  gem 'factory_girl', '~> 4.5.0'
+  gem 'factory_girl_rails'
 end
 
 group :production do
